@@ -11,8 +11,9 @@ function App() {
   const handleSearch = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/search?query=${query}&filter=${filter}`
+        `https://search-tool-backend.onrender.com/search?query=${query}&filter=${filter}`
       );
+
       setResults(res.data.results);
       setCount(res.data.count);
     } catch (err) {
