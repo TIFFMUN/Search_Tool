@@ -254,27 +254,35 @@ body {
 
 .pagination {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
+  padding: 1rem 0 0.5rem;
   font-size: 0.875rem;
   color: #6b7280;
+  gap: 0.5rem;
 }
 
 .page-button {
-  padding: 6px 12px;
-  background-color: #e5e7eb;
-  border: none;
+  width: 34px;
+  height: 34px;
+  background-color: #f3f4f6;
+  border: 1px solid #e5e7eb;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 0.875rem;
-  margin-left: 4px;
-  transition: background-color 0.2s ease;
+  font-weight: 500;
+  color: #111827;
 }
 
 .page-button.active {
   background-color: #2563eb;
   color: white;
+  border-color: #2563eb;
+}
+
+.page-info {
+  flex-grow: 1;
+  text-align: left;
+  font-size: 0.85rem;
+  color: #6b7280;
 }
