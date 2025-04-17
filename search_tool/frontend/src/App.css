@@ -9,13 +9,13 @@ body {
   min-height: 100vh;
 }
 
-.container {
+.app-container {
   width: 100%;
   max-width: 900px;
   padding: 2rem;
 }
 
-.search-panel {
+.search-section {
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 12px;
@@ -27,20 +27,20 @@ body {
   gap: 1rem;
 }
 
-.title {
+.main-heading {
   font-size: 1.8rem;
   font-weight: bold;
   color: #1f2937;
   margin-bottom: 0.25rem;
 }
 
-.subtitle {
+.subheading {
   color: #6b7280;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
 
-.search-input-wrapper {
+.input-wrapper {
   width: 100%;
 }
 
@@ -53,15 +53,7 @@ body {
   box-sizing: border-box;
 }
 
-/* .filters {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.9rem;
-} */
-
-.filters {
+.filter-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,24 +61,19 @@ body {
   gap: 1rem;
 }
 
-.filter-label-title {
+.filter-heading {
   font-weight: 500;
   color: #4b5563;
 }
 
-.filter-label {
+.filter-option {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
 
-/* .search-button-row {
-  display: flex;
-  justify-content: flex-end;
-} */
-
-.search-button-row {
-  margin-left: auto; /* pushes it to the right */
+.search-button-container {
+  margin-left: auto;
   display: flex;
   align-items: center;
 }
@@ -107,8 +94,7 @@ body {
   background-color: #1d4ed8;
 }
 
-/* Results section */
-.results-panel {
+.results-section {
   background-color: #ffffff;
   padding: 1.5rem 2rem;
   border-radius: 12px;
@@ -124,14 +110,13 @@ body {
   color: #1f2937;
 }
 
-.result-list {
+.result-cards {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
 }
 
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: space-between;
@@ -139,13 +124,12 @@ body {
   margin-top: 1rem;
 }
 
-.pagination-info.left-align {
-  text-align: left;
+.page-info {
   color: #374151;
   font-size: 0.9rem;
 }
 
-.pagination-buttons {
+.page-buttons {
   display: flex;
   gap: 0.5rem;
 }
@@ -160,13 +144,12 @@ body {
   text-align: center;
 }
 
-.active-page-button {
+.page-button.active {
   background-color: #2563eb;
   color: white;
   border-color: #2563eb;
 }
 
-/* Hide results before search */
-.results-panel.hidden {
+.results-section.hidden {
   display: none;
 }
