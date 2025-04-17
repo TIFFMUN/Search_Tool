@@ -152,7 +152,6 @@ function App() {
           Search the Office of Foreign Assets Control (OFAC) sanctions lists
         </p>
 
-        {/* Updated Search Input */}
         <div className="search-input-wrapper">
           <input
             type="text"
@@ -163,7 +162,6 @@ function App() {
           />
         </div>
 
-        {/* Updated Filters */}
         <div className="filters">
           <span className="filter-label-title">Search in:</span>
           {[
@@ -184,7 +182,6 @@ function App() {
           ))}
         </div>
 
-        {/* Search Button at bottom right */}
         <div className="search-button-row">
           <button onClick={handleSearch} className="search-button">
             Search
@@ -192,7 +189,6 @@ function App() {
         </div>
       </div>
 
-      {/* Search Results */}
       <div className={`results-panel ${!submitted ? "hidden" : ""}`}>
         <div className="results-header">
           <span>Search Results</span>
