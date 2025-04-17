@@ -13,7 +13,6 @@
   box-sizing: border-box;
   overflow: hidden;
   word-break: break-word;
-  overflow-wrap: break-word;
   white-space: pre-wrap;
 }
 
@@ -25,17 +24,16 @@
 }
 
 .result-icon {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #6b7280;
   margin-right: 0.5rem;
 }
 
 .result-name {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 0.1rem;
-  text-transform: none;
   word-break: break-word;
 }
 
@@ -50,14 +48,18 @@
   font-size: 0.85rem;
   color: #4b5563;
   padding-left: 1.75rem;
-  white-space: pre-wrap;
   word-break: break-word;
-  overflow-wrap: break-word;
 }
 
 .result-label {
   font-weight: 500;
   color: #4b5563;
+}
+
+.text-block {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .result-card:first-child {
@@ -73,17 +75,11 @@
 
 .result-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 800px); /* 👈 fixed width */
-  justify-content: center; /* 👈 optional: center-align the grid */
-
+  grid-template-columns: repeat(auto-fill, 800px);
+  justify-content: center;
   gap: 1rem;
 }
-/* Hide result panel before search */
+
 .results-panel.hidden {
   display: none;
-}
-.text-block {
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
 }
