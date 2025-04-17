@@ -84,16 +84,16 @@ function App() {
         </div>
         {count > resultsPerPage && (
           <div className="pagination">
-            <span className="page-info">
+            <span className="pagination-info">
               Page {currentPage} of {totalPages}
             </span>
-            <div className="pagination-buttons">
+            <div className="pagination-info left-align">
               {[...Array(totalPages).keys()].map((i) => (
                 <button
                   key={i}
                   onClick={() => setCurrentPage(i + 1)}
                   className={
-                    currentPage === i + 1 ? "page-button active" : "page-button"
+                    currentPage === i + 1 ? "active-page-button" : "page-button"
                   }
                 >
                   {i + 1}
