@@ -254,44 +254,34 @@ body {
 
 .pagination {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
-  padding: 1rem 0 0.5rem;
-  font-size: 0.875rem;
-  color: #6b7280;
+  margin-top: 1rem;
+}
+
+.pagination-info.left-align {
+  text-align: left;
+  color: #374151;
+  font-size: 0.9rem;
+}
+
+.pagination-buttons {
+  display: flex;
   gap: 0.5rem;
 }
 
 .page-button {
-  width: 34px;
-  height: 34px;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ccc;
   background-color: #f3f4f6;
-  border: 1px solid #e5e7eb;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
-  color: #111827;
+  font-size: 0.875rem;
+  text-align: center;
 }
 
 .page-button.active {
   background-color: #2563eb;
   color: white;
   border-color: #2563eb;
-}
-
-.page-info {
-  flex-grow: 1;
-  text-align: left;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.pagination-info.left-align {
-  text-align: left;
-  flex-grow: 1;
-  color: #374151;
-  font-size: 0.9rem;
-  margin-top: auto;
-  margin-bottom: auto;
 }
