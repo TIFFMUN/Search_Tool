@@ -82,7 +82,7 @@ function ResultCard({ data }) {
         )}
 
         {!isPerson && location && (
-          <div className="text-block">
+          <div className="text-block truncate-multiline">
             <span className="result-label">Location:</span> {location}
           </div>
         )}
