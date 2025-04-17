@@ -1,9 +1,9 @@
 .result-card {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .result-header {
@@ -15,6 +15,7 @@
 
 .result-icon {
   font-size: 1.25rem;
+  color: #6b7280;
 }
 
 .result-name {
