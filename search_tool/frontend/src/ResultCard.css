@@ -1,4 +1,4 @@
-/* .result-card {
+.result-card {
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
@@ -6,6 +6,10 @@
   background-color: white;
   border-radius: 0;
   font-family: "Segoe UI", sans-serif;
+  min-height: 120px;
+  height: 120px;
+  overflow: hidden;
+  justify-content: center;
 }
 
 .result-header {
@@ -27,18 +31,21 @@
   color: #1f2937;
   margin-bottom: 0.1rem;
   text-transform: none;
+  word-break: break-word;
 }
 
 .result-meta {
   font-size: 0.85rem;
   color: #6b7280;
   margin-bottom: 0.3rem;
+  word-break: break-word;
 }
 
 .result-details {
   font-size: 0.85rem;
   color: #4b5563;
   padding-left: 1.75rem;
+  word-break: break-word;
 }
 
 .result-label {
@@ -55,8 +62,9 @@
 .result-card:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-} */
+}
 
+/* 
 .result-card {
   display: flex;
   flex-direction: column;
@@ -126,4 +134,4 @@
 .result-card:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-}
+} */
