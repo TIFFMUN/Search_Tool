@@ -53,12 +53,20 @@ body {
   box-sizing: border-box;
 }
 
-.filters {
+/* .filters {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
   font-size: 0.9rem;
+} */
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .filter-label-title {
@@ -72,10 +80,15 @@ body {
   gap: 0.25rem;
 }
 
-.search-button-row {
+/* .search-button-row {
   display: flex;
   justify-content: flex-end;
-  /* margin-top: rem; */
+} */
+
+.search-button-row {
+  margin-left: auto; /* pushes it to the right */
+  display: flex;
+  align-items: center;
 }
 
 .search-button {
