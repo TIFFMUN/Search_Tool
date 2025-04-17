@@ -78,10 +78,11 @@
 
   gap: 1rem;
 }
-/* Hide result panel before search */
+
 .results-panel.hidden {
   display: none;
 }
+
 .text-block {
   word-break: break-word;
   overflow-wrap: break-word;
