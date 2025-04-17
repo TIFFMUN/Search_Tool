@@ -1,37 +1,3 @@
-/* .result-card {
-  display: block;
-  flex-direction: column;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  background-color: white;
-  border-radius: 0;
-  font-family: "Segoe UI", sans-serif;
-  min-height: 120px;
-  height: 120px;
-  overflow: hidden;
-  justify-content: center;
-  box-sizing: border-box;
-  min-width: 100%;
-  width: 100%;
-  word-wrap: break-word;
-  white-space: normal;
-  overflow-wrap: anywhere;
-} */
-/* .result-card {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1.5rem;
-  border: 1px solid #e5e7eb;
-  border-radius: 8px;
-  background-color: #f9fafb;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  box-sizing: border-box;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-} */
-
 .result-card {
   display: flex;
   flex-direction: column;
@@ -42,13 +8,15 @@
   background-color: #f9fafb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
-  max-width: 100%;
-  min-height: 150px;
   box-sizing: border-box;
-  overflow: hidden;
+
+  /* Wrapping */
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: pre-wrap;
+
+  /* Optional: fix card height baseline */
+  min-height: 150px;
 }
 
 .result-header {
@@ -69,24 +37,21 @@
   font-weight: 600;
   color: #1f2937;
   margin-bottom: 0.1rem;
-  text-transform: none;
-  word-break: break-word;
 }
 
 .result-meta {
   font-size: 0.85rem;
   color: #6b7280;
   margin-bottom: 0.3rem;
-  word-break: break-word;
 }
 
 .result-details {
   font-size: 0.85rem;
   color: #4b5563;
   padding-left: 1.75rem;
-  white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .result-label {
@@ -105,21 +70,16 @@
   border-bottom-right-radius: 8px;
 }
 
-/* .result-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  width: 100%;
-} */
 .result-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* or 350px */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
 }
-/* Hide result panel before search */
+
 .results-panel.hidden {
   display: none;
 }
+
 .text-block {
   word-break: break-word;
   overflow-wrap: break-word;
