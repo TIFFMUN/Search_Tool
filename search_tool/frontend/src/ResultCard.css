@@ -78,6 +78,7 @@
 
   gap: 1rem;
 }
+/* Hide result panel before search */
 .results-panel.hidden {
   display: none;
 }

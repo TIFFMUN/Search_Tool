@@ -1,4 +1,3 @@
-import React from "react";
 import "./ResultCard.css";
 
 const countryMap = {
@@ -22,11 +21,11 @@ function formatDOB(raw) {
   // Year and month only
   if (/^\d{4}-\d{2}$/.test(raw)) {
     const [year, month] = raw.split("-");
-    return `${year}-${month}-XX`;
+    return ${year}-${month}-XX;
   }
 
   // Year only
-  if (/^\d{4}$/.test(raw)) return `${raw}-XX-XX`;
+  if (/^\d{4}$/.test(raw)) return ${raw}-XX-XX;
 
   return raw;
 }
@@ -92,3 +91,5 @@ function ResultCard({ data }) {
 }
 
 export default ResultCard;
+
+
