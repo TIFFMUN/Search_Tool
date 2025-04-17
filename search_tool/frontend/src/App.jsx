@@ -8,6 +8,13 @@ function App() {
   const [filter, setFilter] = useState("all");
   const [results, setResults] = useState([]);
   const [count, setCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const RESULTS_PER_PAGE = 5;
+
+  const paginatedResults = results.slice(
+    (currentPage - 1) * RESULTS_PER_PAGE,
+    currentPage * RESULTS_PER_PAGE
+  );
 
   const handleSearch = async () => {
     try {
@@ -16,6 +23,7 @@ function App() {
       );
       setResults(res.data.results);
       setCount(res.data.count);
+      setCurrentPage(1);
     } catch (err) {
       console.error("Search failed:", err);
     }
@@ -64,8 +72,24 @@ function App() {
           <span>{count} matches found</span>
         </div>
         <div className="result-list">
-          {results.map((item, idx) => (
+          {paginatedResults.map((item, idx) => (
             <ResultCard key={idx} data={item} />
+          ))}
+        </div>
+
+        <div className="pagination">
+          {Array.from({
+            length: Math.ceil(results.length / RESULTS_PER_PAGE),
+          }).map((_, idx) => (
+            <button
+              key={idx}
+              className={`page-button ${
+                currentPage === idx + 1 ? "active" : ""
+              }`}
+              onClick={() => setCurrentPage(idx + 1)}
+            >
+              {idx + 1}
+            </button>
           ))}
         </div>
       </div>
