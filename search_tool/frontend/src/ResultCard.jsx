@@ -52,22 +52,6 @@ function ResultCard({ data }) {
           </div>
         </div>
       </div>
-
-      {/* <div className="result-details">
-        {isPerson && (
-          <div>
-            <span className="result-label">DOB:</span> {dob} •{" "}
-            <span className="result-label">Nationality:</span>{" "}
-            {nationality || "N/A"}
-          </div>
-        )}
-
-        {!isPerson && location && (
-          <div>
-            <span className="result-label">Location:</span> {location}
-          </div>
-        )}
-      </div> */}
       <div className="result-details">
         {isPerson && (
           <>
