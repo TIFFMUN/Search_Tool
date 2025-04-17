@@ -53,7 +53,7 @@ function ResultCard({ data }) {
         </div>
       </div>
 
-      <div className="result-details">
+      {/* <div className="result-details">
         {isPerson && (
           <div>
             <span className="result-label">DOB:</span> {dob} •{" "}
@@ -64,6 +64,25 @@ function ResultCard({ data }) {
 
         {!isPerson && location && (
           <div>
+            <span className="result-label">Location:</span> {location}
+          </div>
+        )}
+      </div> */}
+      <div className="result-details">
+        {isPerson && (
+          <>
+            <div className="text-block">
+              <span className="result-label">DOB:</span> {dob}
+            </div>
+            <div className="text-block">
+              <span className="result-label">Nationality:</span>{" "}
+              {nationality || "N/A"}
+            </div>
+          </>
+        )}
+
+        {!isPerson && location && (
+          <div className="text-block">
             <span className="result-label">Location:</span> {location}
           </div>
         )}
