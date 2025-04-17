@@ -107,13 +107,17 @@
   border-bottom-right-radius: 8px;
 }
 
-.result-list {
+/* .result-list {
   display: flex;
   flex-direction: column;
   gap: 0;
   width: 100%;
+} */
+.result-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* or 350px */
+  gap: 1rem;
 }
-
 /* Hide result panel before search */
 .results-panel.hidden {
   display: none;
