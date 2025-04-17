@@ -1,11 +1,49 @@
 .result-card {
-  background-color: #ffffff;
-  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 1px solid #e5e7eb;
-  border-top: none;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: white;
+  border-radius: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+.result-icon {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-right: 0.5rem;
+}
+
+.result-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.1rem;
+  text-transform: none;
+}
+
+.result-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 0.3rem;
+}
+
+.result-details {
+  font-size: 0.85rem;
+  color: #4b5563;
+  padding-left: 1.75rem;
+}
+
+.result-label {
+  font-weight: 500;
+  color: #4b5563;
 }
 
 .result-card:first-child {
@@ -19,40 +57,6 @@
   border-bottom-right-radius: 8px;
 }
 
-.result-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.result-icon {
-  font-size: 1.2rem;
-  color: #6b7280;
-}
-
-.result-name {
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: #1f2937;
-  text-transform: uppercase;
-}
-
-.result-meta {
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-.result-details {
-  font-size: 0.85rem;
-  color: #4b5563;
-  padding-left: 1.75rem;
-  margin-top: 0.25rem;
-}
-
-.result-label {
-  font-weight: 500;
-  color: #4b5563;
-}
 /* 
 .result-card {
   background-color: #ffffff;
