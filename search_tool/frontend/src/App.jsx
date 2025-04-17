@@ -180,12 +180,11 @@ function App() {
               {label}
             </label>
           ))}
-        </div>
-
-        <div className="search-button-row">
-          <button onClick={handleSearch} className="search-button">
-            Search
-          </button>
+          <div className="search-button-row">
+            <button onClick={handleSearch} className="search-button">
+              Search
+            </button>
+          </div>
         </div>
       </div>
 
