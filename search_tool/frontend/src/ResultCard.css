@@ -1,4 +1,4 @@
-.result-card {
+/* .result-card {
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
@@ -62,9 +62,8 @@
 .result-card:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-}
+} */
 
-/* 
 .result-card {
   display: flex;
   flex-direction: column;
@@ -134,4 +133,4 @@
 .result-card:last-child {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
-} */
+}
