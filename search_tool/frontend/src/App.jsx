@@ -191,7 +191,7 @@ function App() {
             <span className="pagination-info">
               Page {currentPage} of {totalPages}
             </span>
-            <div className="pagination-buttons">
+            <div className="pagination-info left-align">
               {[...Array(totalPages).keys()].map((i) => (
                 <button
                   key={i}

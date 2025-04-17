@@ -286,3 +286,12 @@ body {
   font-size: 0.85rem;
   color: #6b7280;
 }
+
+.pagination-info.left-align {
+  text-align: left;
+  flex-grow: 1;
+  color: #374151;
+  font-size: 0.9rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
