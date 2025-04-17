@@ -92,9 +92,6 @@
 .result-label {
   font-weight: 500;
   color: #4b5563;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: pre-wrap;
 }
 
 .result-card:first-child {
@@ -122,4 +119,9 @@
 /* Hide result panel before search */
 .results-panel.hidden {
   display: none;
+}
+.text-block {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
