@@ -27,11 +27,6 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   width: 100%;
   box-sizing: border-box;
-
-  /* ✅ General long-text handling */
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: pre-wrap; /* ← KEY: breaks long lines, respects newlines */
 }
 
 .result-header {
@@ -67,8 +62,9 @@
   font-size: 0.85rem;
   color: #4b5563;
   padding-left: 1.75rem;
+  white-space: pre-wrap;
   word-break: break-word;
-  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .result-label {
