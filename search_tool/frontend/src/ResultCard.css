@@ -53,25 +53,20 @@
 .result-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  justify-content: space-between;
   padding: 1rem 1.5rem;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   background-color: #f9fafb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-
   width: 100%;
-  max-width: 100%;
-  min-height: 150px; /* Optional, but remove this if content gets clipped */
   box-sizing: border-box;
 
-  /* ✅ Remove this line to allow text to expand the card */
-  /* overflow: hidden; */
-
-  /* ✅ Wrap long content safely */
+  white-space: pre-wrap;
   word-break: break-word;
   overflow-wrap: break-word;
-  white-space: pre-wrap;
+
+  min-height: 170px;
 }
 
 .result-header {
