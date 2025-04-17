@@ -78,6 +78,9 @@ function App() {
         </div>
 
         <div className="pagination">
+          <div className="page-info">
+            Page {currentPage} of {Math.ceil(results.length / RESULTS_PER_PAGE)}
+          </div>
           {Array.from({
             length: Math.ceil(results.length / RESULTS_PER_PAGE),
           }).map((_, idx) => (
