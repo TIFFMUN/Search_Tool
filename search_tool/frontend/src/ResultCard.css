@@ -73,7 +73,7 @@
 
 .result-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px); /* 👈 fixed width */
+  grid-template-columns: repeat(auto-fill, 800px); /* 👈 fixed width */
   justify-content: center; /* 👈 optional: center-align the grid */
 
   gap: 1rem;
