@@ -17,7 +17,7 @@
   white-space: normal;
   overflow-wrap: anywhere;
 } */
-.result-card {
+/* .result-card {
   display: flex;
   flex-direction: column;
   padding: 1rem 1.5rem;
@@ -30,6 +30,27 @@
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
+} */
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 100%; /* Don't stretch beyond container */
+  min-height: 150px; /* Optional: ensures all cards have same height */
+  box-sizing: border-box;
+  overflow: hidden;
+
+  /* Wrap long text safely */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
 }
 
 .result-header {
