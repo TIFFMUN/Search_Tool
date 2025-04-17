@@ -1,70 +1,135 @@
+// import React from "react";
+// import "./ResultCard.css";
+
+// const countryMap = {
+//   ru: "Russia",
+//   fr: "France",
+//   uk: "United Kingdom",
+//   us: "United States",
+//   ua: "Ukraine",
+//   de: "Germany",
+//   cn: "China",
+//   suhh: "Former Soviet Union",
+//   // Add more as needed
+// };
+
+// function formatDOB(raw) {
+//   if (!raw || typeof raw !== "string") return "N/A";
+
+//   // Full date
+//   if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+
+//   // Year and month only
+//   if (/^\d{4}-\d{2}$/.test(raw)) {
+//     const [year, month] = raw.split("-");
+//     return `${year}-${month}-XX`;
+//   }
+
+//   // Year only
+//   if (/^\d{4}$/.test(raw)) return `${raw}-XX-XX`;
+
+//   return raw;
+// }
+
+// function ResultCard({ data }) {
+//   const props = data.properties || {};
+//   const name = data.caption || props.name?.[0] || "Unknown Name";
+//   const dob = formatDOB(props.birthDate?.[0]);
+//   const nationalityRaw = props.citizenship || [];
+//   const nationality = nationalityRaw.map((c) => countryMap[c] || c).join(", ");
+//   const location = props.address?.[0] || null;
+//   const id = data.id || "-";
+//   const isPerson = data.schema === "Person" || data.schema === "person";
+
+//   return (
+//     <div className="result-card">
+//       <div className="result-header">
+//         <span className="result-icon">{isPerson ? "👤" : "🏢"}</span>
+//         <div>
+//           <div className="result-name">{name}</div>
+//           <div className="result-meta">
+//             {id} • {data.schema.charAt(0).toUpperCase() + data.schema.slice(1)}
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className="result-details">
+//         {isPerson && (
+//           <div>
+//             <span className="result-label">DOB:</span> {dob} •{" "}
+//             <span className="result-label">Nationality:</span>{" "}
+//             {nationality || "N/A"}
+//           </div>
+//         )}
+
+//         {!isPerson && location && (
+//           <div>
+//             <span className="result-label">Location:</span> {location}
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ResultCard;
+
 import React from "react";
 import "./ResultCard.css";
 
-const countryMap = {
-  ru: "Russia",
-  fr: "France",
-  uk: "United Kingdom",
-  us: "United States",
-  ua: "Ukraine",
-  de: "Germany",
-  cn: "China",
-  suhh: "Former Soviet Union",
-  // Add more as needed
-};
-
-function formatDOB(raw) {
-  if (!raw || typeof raw !== "string") return "N/A";
-
-  // Full date
-  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
-
-  // Year and month only
-  if (/^\d{4}-\d{2}$/.test(raw)) {
-    const [year, month] = raw.split("-");
-    return `${year}-${month}-XX`;
-  }
-
-  // Year only
-  if (/^\d{4}$/.test(raw)) return `${raw}-XX-XX`;
-
-  return raw;
-}
-
 function ResultCard({ data }) {
   const props = data.properties || {};
-  const name = data.caption || props.name?.[0] || "Unknown Name";
-  const dob = formatDOB(props.birthDate?.[0]);
-  const nationalityRaw = props.citizenship || [];
-  const nationality = nationalityRaw.map((c) => countryMap[c] || c).join(", ");
-  const location = props.address?.[0] || null;
-  const id = data.id || "-";
-  const isPerson = data.schema === "Person" || data.schema === "person";
+
+  const getDateFormatted = (dob) => {
+    if (!dob || typeof dob !== "string") return "Unknown";
+    const parts = dob.split("-");
+    return (
+      (parts[0] || "YYYY") + "-" + (parts[1] || "MM") + "-" + (parts[2] || "DD")
+    );
+  };
+
+  const getNationality = (codes) => {
+    const map = {
+      suhh: "Former Soviet Union",
+      ru: "Russia",
+      fr: "France",
+      uk: "United Kingdom",
+      us: "United States",
+      // Add more mappings as needed
+    };
+    return (codes || []).map((c) => map[c] || c).join(", ");
+  };
 
   return (
     <div className="result-card">
       <div className="result-header">
-        <span className="result-icon">{isPerson ? "👤" : "🏢"}</span>
+        <div className="result-icon">
+          {data.schema?.toLowerCase() === "organization" ? "🏢" : "👤"}
+        </div>
         <div>
-          <div className="result-name">{name}</div>
+          <div className="result-name">{props.name?.[0] || data.caption}</div>
           <div className="result-meta">
-            {id} • {data.schema.charAt(0).toUpperCase() + data.schema.slice(1)}
+            {data.id} •{" "}
+            {data.schema?.replace("LegalEntity", "Entity") || "Unknown"}
           </div>
         </div>
       </div>
-
       <div className="result-details">
-        {isPerson && (
+        {props.birthDate && (
           <div>
-            <span className="result-label">DOB:</span> {dob} •{" "}
-            <span className="result-label">Nationality:</span>{" "}
-            {nationality || "N/A"}
+            <span className="result-label">DOB:</span>{" "}
+            {getDateFormatted(props.birthDate[0])}
           </div>
         )}
-
-        {!isPerson && location && (
+        {props.citizenship && (
           <div>
-            <span className="result-label">Location:</span> {location}
+            <span className="result-label">Nationality:</span>{" "}
+            {getNationality(props.citizenship)}
+          </div>
+        )}
+        {props.address && (
+          <div>
+            <span className="result-label">Location:</span> {props.address[0]}
           </div>
         )}
       </div>
