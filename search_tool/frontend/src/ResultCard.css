@@ -1,5 +1,4 @@
-.result-card {
-  /* display: flex; */
+/* .result-card {
   display: block;
   flex-direction: column;
   padding: 1rem 1.5rem;
@@ -17,6 +16,22 @@
   word-wrap: break-word;
   white-space: normal;
   overflow-wrap: anywhere;
+} */
+.result-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  box-sizing: border-box;
+
+  /* ✅ General long-text handling */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap; /* ← KEY: breaks long lines, respects newlines */
 }
 
 .result-header {
