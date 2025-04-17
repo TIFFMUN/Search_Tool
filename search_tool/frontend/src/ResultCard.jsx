@@ -13,31 +13,23 @@ const countryMap = {
   // Add more as needed
 };
 
-// function formatDOB(raw) {
-//   if (!raw || typeof raw !== "string") return "N/A";
+function formatDOB(raw) {
+  if (!raw || typeof raw !== "string") return "N/A";
 
-//   // Full date
-//   if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
+  // Full date
+  if (/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw;
 
-//   // Year and month only
-//   if (/^\d{4}-\d{2}$/.test(raw)) {
-//     const [year, month] = raw.split("-");
-//     return `${year}-${month}-XX`;
-//   }
+  // Year and month only
+  if (/^\d{4}-\d{2}$/.test(raw)) {
+    const [year, month] = raw.split("-");
+    return `${year}-${month}-XX`;
+  }
 
-//   // Year only
-//   if (/^\d{4}$/.test(raw)) return `${raw}-XX-XX`;
+  // Year only
+  if (/^\d{4}$/.test(raw)) return `${raw}-XX-XX`;
 
-//   return raw;
-// }
-
-const getDateFormatted = (dob) => {
-  if (!dob || typeof dob !== "string") return "Unknown";
-  const parts = dob.split("-");
-  return (
-    (parts[0] || "YYYY") + "-" + (parts[1] || "MM") + "-" + (parts[2] || "DD")
-  );
-};
+  return raw;
+}
 
 function ResultCard({ data }) {
   const props = data.properties || {};
