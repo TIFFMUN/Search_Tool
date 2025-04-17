@@ -9,9 +9,7 @@ A full-stack web app to search for individuals and entities listed in global san
 - Deployment: Vercel (frontend), Render (backend)
 - Others: Docker, GitHub
 
-## 🚀 Live Links
-- Frontend: [https://search-tool-frontend.vercel.app  ](https://search-tool-beta.vercel.app/)
-- Backend: [https://search-tool-backend.onrender.com](https://search-tool-backend.onrender.com)
+## 🚀 Live Links: [https://search-tool-frontend.vercel.app  ](https://search-tool-beta.vercel.app/)
 
 ## 🛠️ Running Locally
 
