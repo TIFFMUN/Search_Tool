@@ -13,7 +13,7 @@ A full-stack web app to search for individuals and entities listed in global san
 [https://search-tool-frontend.vercel.app  ](https://search-tool-beta.vercel.app/)
 
 ## Demo Video 📹 
-[Demo Video](demo.mp4)
+[Demo Video](Demo.mp4)
 
 ## 🛠️ Running Locally
 
